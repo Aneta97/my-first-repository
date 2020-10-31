@@ -1,0 +1,11 @@
+img {
+  width:150px;
+}
+h1,div {font-family: 'Trispace', sans-serif;}
+
+div {display:flex;}
+section {width: 200px;
+text-align: center;
+}
+
+a {display:block;}
