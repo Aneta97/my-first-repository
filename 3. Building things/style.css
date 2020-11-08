@@ -12,3 +12,26 @@ ul.b {list-style-type: square;}
 .Pink {color: deeppink;
 text-decoration: underline}
 .Und {text-decoration: underline}
+
+button {width: 280px;
+  height: 70px;
+  background-color:lime;
+  font-size: 30px;
+  font-weight: bold;
+//left:90px}
+
+.druheTlacitko {
+  font-size: 20px;
+  background-color: mediumorchid;
+}
+
+.tretiTlacitko {
+  font-size: 20px;
+  background-color: black;
+color:white}
+
+
+button:active {
+  margin: 5px;
+  width: 270px;
+  height: 60px;}

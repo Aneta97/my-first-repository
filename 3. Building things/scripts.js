@@ -47,7 +47,7 @@ let additionalBlock = {
 // ];
 
  function PridaniOdstavce (block) {
-     console.log(block);
+  //   console.log(block);
     $('body').append('<h2>' + block.title + '</h2>' + '<p>' + block.text + '</p>');
 }
  
@@ -55,3 +55,18 @@ let additionalBlock = {
  PridaniOdstavce(additionalBlock);
  //additionalBlocks.forEach(PridaniOdstavce);
  
+ //Přidej button co po kliknutí něco udělá:
+ // a) Analytický způsob:
+// $('button').on('click', klikatko);
+// function klikatko () 
+// {console.log('Yeah, you clicked me')}
+
+// b) syntetický způsob
+$('button').on('click', () => {console.log('Yeah, you clicked me')})
+
+$('button.druheTlacitko').on('click', () => {$('button.prvniTlacitko').text('Změna je život')})
+
+$('button.tretiTlacitko').on('click', () => 
+   // {$('button').css.text ('background-color: black; color: white')})
+   {$('button').css('background-color', 'black', 'color', 'white'),
+   $('button').css('color', 'white')})
