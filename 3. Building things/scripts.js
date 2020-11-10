@@ -68,5 +68,54 @@ $('button.druheTlacitko').on('click', () => {$('button.prvniTlacitko').text('Zm�
 
 $('button.tretiTlacitko').on('click', () => 
    // {$('button').css.text ('background-color: black; color: white')})
-   {$('button').css('background-color', 'black', 'color', 'white'),
+   {$('button').css('background-color', 'black'),
    $('button').css('color', 'white')})
+
+// řešení co funguje jen jednou s výchozí hodnotou (tzv. ONLOADOVACÍ hodnotou):
+//    - vyřešeno: variabel proměnna musí být uvnitř mojeFunkce, protože existuje jen "operativně" pro účely funkce. mimo spouštění funkce neexistuje, proto musí být uvnitř.
+// $('button.druheTlacitko').on('click', () => {
+//   var Promenna=$('#myText').val();
+//   $('button.druheTlacitko').css('background-color', Promenna);
+// })
+
+// // Druhý pokus, nefunguje vůbec: - vyřešeno returnem
+// function getValue() {  
+// return $('#myText').val()};    
+// $('button.druheTlacitko').on('click', () => {$('button.druheTlacitko').css('background-color', getValue()
+// )})
+
+// třetí pokus, který se ukázal být opakováním prvního:
+  // var Promenna=document.getElementById('myText').val;    
+  // $('button.druheTlacitko').on('click', () => {$('button.druheTlacitko').css('background-color', Promenna
+  // )})
+
+// script z internetu, kterým někdo řešil, že mu to bralo vpotaz jen onload hodnotu - vyřešeno returnem
+// function getValue() {
+//   // this line does the magic
+//   var theValue = $('#myText').val()
+// alert(theValue);
+// //return theValue;
+// }
+// getValue();
+// pokus co jsem našla na netu který by měl poznat, jestli bylo na tlačítko kliknuto:
+// document.getElementById("'button.druheTlacitko").addEventListener("click", callback, true);
+
+// function callback() {
+//    alert("clicked");
+//    return false;
+// }
+
+//--------------------------------------------------------------------
+//Druhý úkol: ignorovat další kliknutí:
+var clicked = false;
+
+$('button.druheTlacitko').on('click', () => {
+  if(clicked == false)
+  {
+    var Promenna=$('#myText').val();
+    $('button.druheTlacitko').css('background-color', Promenna);
+    clicked = true;
+  }
+})
+
+
