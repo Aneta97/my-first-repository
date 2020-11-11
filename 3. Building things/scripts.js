@@ -106,12 +106,13 @@ $('button.tretiTlacitko').on('click', () =>
 // }
 
 //--------------------------------------------------------------------
-//Druhý úkol: ignorovat další kliknutí:
+//Změnit barvu na input a ignorovat další kliknutí:
 var clicked = false;
 
 $('button.druheTlacitko').on('click', () => {
   if(clicked == false)
   {
+
     var Promenna=$('#myText').val();
     $('button.druheTlacitko').css('background-color', Promenna);
     clicked = true;
