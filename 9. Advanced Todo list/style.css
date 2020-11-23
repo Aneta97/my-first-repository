@@ -1,0 +1,30 @@
+button {background-color: rgb(204, 58, 204);
+color:white;}
+
+body {background-color: #7FFFD4;}
+
+div.jina-barva {display:flex;
+    width:300px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;;
+    height: auto;
+    background-color: #F8F8FF;
+align-self: center;}
+
+.pridat {display:flex;
+justify-content: center;}
+
+input, button {margin: none;
+width: auto;}
+ 
+
+ul {list-style-type: none;}
+
+
+li {width: 500px;
+justify-content: center;} 
+
+/* pokus nastavit aby nově přidaný položky byly v řádku místo ve sloupečku: */
+.polozky {display:flexbox;
+justify-content: flex-start;}
